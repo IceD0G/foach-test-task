@@ -1,0 +1,75 @@
+.input {
+  width: 100%;
+  height: 47px;
+  display: flex;
+  align-items: center;
+  font-family: $lato;
+  position: relative;
+  margin-top: 15px;
+  input {
+    width: 100%;
+    height: inherit;
+    background: transparent;
+    border: 1px solid $grey100;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    outline: none;
+    padding: 0 22px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    &:focus {
+      border: 1px solid $blue;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &[type="password"] {
+      padding-right: 50px;
+    }
+  }
+  .label {
+    display: inline-block;
+    color: $grey200;
+    background-color: transparent;
+    padding: 0 2px;
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    margin-top: -8.5px;
+    transition: all 0.3s ease;
+    z-index: 3;
+    pointer-events: none;
+  }
+  .eye-icon {
+    position: absolute;
+    z-index: 4;
+    right: 17px;
+    cursor: pointer;
+  }
+
+  &.focused {
+    .label {
+      background-color: white;
+      top: -1.5px;
+      color: $blue;
+    }
+  }
+
+  &.error {
+    input {
+      border: 1px solid #EC5353;
+    }
+    .label {
+      color: #EC5353;
+    }
+  }
+
+  &.half {
+    width: calc(50% - 5px);
+  }
+  &.full {
+    width: 100%;
+  }
+}

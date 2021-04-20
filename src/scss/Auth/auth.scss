@@ -1,0 +1,44 @@
+.auth {
+  width: 470px;
+  height: 790px;
+  background-color: white;
+  padding: 57px 44px 93px 48px;
+  .auth-title {
+    font-family: $playfair;
+    font-weight: bold;
+    font-size: 25px;
+    color: $black;
+    margin-bottom: 32px;
+    &::before {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 3px;
+      background-color: $green;
+      margin-bottom: 12px;
+    }
+  }
+  .auth-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .auth-check {
+
+  }
+  .auth-button {
+    width: 201px;
+    height: 47px;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+    margin: 42px auto 0;
+    cursor: pointer;
+  }
+}
